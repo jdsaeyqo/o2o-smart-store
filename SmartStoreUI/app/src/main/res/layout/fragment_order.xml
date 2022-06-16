@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:textSize="18dp"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/tv_distance"
+        android:textColor="@color/coffee_light_gray"
+        android:text="매장과의 거리가 400m 입니다."
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <ImageButton
+        android:layout_marginStart="20dp"
+        android:background="@drawable/map"
+        android:id="@+id/btn_map"
+        app:layout_constraintTop_toTopOf="@id/tv_distance"
+        app:layout_constraintBottom_toBottomOf="@id/tv_distance"
+        app:layout_constraintStart_toEndOf="@id/tv_distance"
+        android:layout_width="20dp"
+        android:layout_height="20dp"/>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_distance"
+        app:layout_constraintStart_toStartOf="@id/tv_distance"
+        android:textSize="40dp"
+        android:textColor="@color/coffee_gray"
+        android:text="MENU"
+        android:fontFamily="@font/hsbombaram"
+        android:id="@+id/tv_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintTop_toBottomOf="@id/tv_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/rv_menu_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_shoppingList"
+        android:backgroundTint="@color/coffee_gray"
+        android:src="@drawable/ic_shopping_cart_24"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

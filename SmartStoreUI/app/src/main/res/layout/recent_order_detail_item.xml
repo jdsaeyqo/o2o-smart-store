@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <ImageView
+        android:id="@+id/item_iv_product_detail"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/coffee1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_tv_order_menu_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="아메리카노"
+        android:fontFamily="@font/hsbombaram"
+        android:textColor="@color/coffee_gray"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/item_tv_price_detail"
+        app:layout_constraintStart_toEndOf="@id/item_iv_product_detail"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_tv_price_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:text="4000원"
+        android:textColor="@color/coffee_light_gray"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/item_iv_product_detail"
+        app:layout_constraintTop_toBottomOf="@id/item_tv_order_menu_detail" />
+
+    <TextView
+        android:id="@+id/item_tv_order_quantity_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="2잔"
+        android:textColor="@color/coffee_light_gray"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/item_tv_total_price_detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_tv_total_price_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="8000원"
+        android:textColor="@color/coffee_light_gray"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_tv_order_quantity_detail" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.cafe.model.dao.BoardDao">
+
+<insert id="insert" parameterType="Board">
+		INSERT INTO t_board (user_id, content)
+		VALUES (#{userId}, #{content})
+	</insert>
+	
+	<delete id="delete" parameterType="int">
+		DELETE FROM t_board
+		WHERE id = #{id}
+	</delete>
+	
+	<select id="selectAll" resultType="Board">
+		SELECT * FROM t_board
+		ORDER BY id DESC
+	</select>
+
+</mapper>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/board_regular">
+
+    <ImageView
+        android:id="@+id/iv_board_grade"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/seeds" />
+
+    <TextView
+        android:id="@+id/tv_board_user_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/hsbombaram"
+        app:layout_constraintBottom_toBottomOf="@id/iv_board_grade"
+        app:layout_constraintStart_toEndOf="@id/iv_board_grade"
+        app:layout_constraintTop_toTopOf="@id/iv_board_grade"
+        tools:text="ssafy01" />
+
+    <TextView
+        android:id="@+id/tv_board_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/iv_board_grade"
+        app:layout_constraintTop_toBottomOf="@id/iv_board_grade"
+        tools:text="좋습니다" />
+
+    <ImageButton
+        android:visibility="gone"
+        android:id="@+id/btn_board_remove"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
+        android:scaleType="centerInside"
+        android:src="@drawable/minus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

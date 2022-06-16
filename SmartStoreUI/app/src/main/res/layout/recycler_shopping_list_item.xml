@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <ImageView
+        android:id="@+id/item_iv_shop_product"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/coffee1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:background="@color/white"
+        android:scaleType="centerInside"
+        android:src="@drawable/minus"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/btn_shop_remove"
+        android:layout_width="20dp"
+        android:layout_height="20dp"/>
+
+    <TextView
+        android:id="@+id/item_tv_shop_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="@color/coffee_gray"
+        android:fontFamily="@font/hsbombaram"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/item_tv_shop_price"
+        app:layout_constraintStart_toEndOf="@id/item_iv_shop_product"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="아메리카노" />
+
+    <TextView
+        android:id="@+id/item_tv_shop_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="@color/coffee_light_gray"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/item_iv_shop_product"
+        app:layout_constraintTop_toBottomOf="@id/item_tv_shop_name"
+        tools:text="4000원" />
+
+    <TextView
+        android:id="@+id/item_tv_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="@color/coffee_light_gray"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/item_tv_shop_total_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2잔" />
+
+    <TextView
+        android:id="@+id/item_tv_shop_total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="@color/coffee_light_gray"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_tv_quantity"
+        tools:text="8000원" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

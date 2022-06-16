@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ssafy.smartstore.fragment.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/myPageFragment"
+        android:name="com.ssafy.smartstore.fragment.MyPageFragment"
+        android:label="MyPageFragment" />
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="com.ssafy.smartstore.fragment.OrderFragment"
+        android:label="OrderFragment" />
+    <fragment
+        android:id="@+id/boardFragment"
+        android:name="com.ssafy.smartstore.fragment.BoardFragment"
+        android:label="BoardFragment" />
+</navigation>

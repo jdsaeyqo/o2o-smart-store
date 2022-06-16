@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ShoppingListActivity">
+
+    <TextView
+        android:id="@+id/tv_shopping_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="장바구니"
+        android:fontFamily="@font/hsbombaram"
+        android:textColor="@color/coffee_gray"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_selector"
+        android:text="매장"
+        android:textColor="@color/coffee_light_gray"
+        app:layout_constraintBottom_toBottomOf="@id/btn_out"
+        app:layout_constraintEnd_toStartOf="@id/btn_out"
+        app:layout_constraintTop_toTopOf="@id/btn_out" />
+
+    <Button
+        android:id="@+id/btn_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:background="@drawable/button_selector"
+        android:text="T-OUT"
+        android:textColor="@color/coffee_light_gray"
+        app:layout_constraintBottom_toBottomOf="@id/tv_shopping_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_shopping_list" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_shopping_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="30dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_quantity"
+        app:layout_constraintTop_toBottomOf="@id/tv_shopping_list">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/tv_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/coffee_dark_brown"
+        app:layout_constraintBottom_toTopOf="@id/btn_order"
+        app:layout_constraintStart_toStartOf="@id/btn_order"
+        tools:text="총 3개" />
+
+    <TextView
+        android:id="@+id/tv_total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/coffee_dark_brown"
+        app:layout_constraintBottom_toTopOf="@id/btn_order"
+        app:layout_constraintEnd_toEndOf="@id/btn_order"
+        tools:text="12,500원" />
+
+    <Button
+        android:id="@+id/btn_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/coffee_gray"
+        android:text="주문하기"
+        android:textColor="@color/white"
+        android:fontFamily="@font/hsbombaram"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
